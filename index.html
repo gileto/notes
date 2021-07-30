@@ -20,13 +20,13 @@
 						v-on:keypress.enter="addNote"
 					/>
 				</div>
-				<button class="btn" v-on:click="addNote">Добавить</button>
+				<button class="btn" v-on:click="addNote">add</button>
 				<hr />
 				<ul class="list" v-if="notes.length">
 					<li class="list-item" v-for="(note, i) in notes">
 						{{note}}
 						<button class="btn danger" v-on:click="deleteItem(i)">
-							Удалить
+							remove
 						</button>
 					</li>
 					<hr />
