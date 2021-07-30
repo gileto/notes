@@ -12,11 +12,13 @@ Vue.createApp({
             this.inputVal = event.target.value
         },
         addNote() {
-            this.notes.push(this.inputVal)
-            this.inputVal = ''
+            if (this.inputVal && this.inputVal !== " ") {
+                this.notes.push(this.inputVal)
+                this.inputVal = ''
+            }  
         },
         deleteItem(i) {
-            this.notes.splice(i)
+            this.notes.splice(i, 1)
         }
     },
 }).mount('#app')
