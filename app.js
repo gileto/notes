@@ -12,7 +12,7 @@ Vue.createApp({
             this.inputVal = event.target.value
         },
         addNote() {
-            if (this.inputVal && this.inputVal !== " ") {
+            if (this.inputVal.trim()) {
                 this.notes.push(this.inputVal)
                 this.inputVal = ''
             }  
